@@ -1,0 +1,23 @@
+# Cat Side Scroller Game
+
+## Repository
+https://github.com/your-username/cat-side-scroller-game
+
+## Description
+This is a simple yet engaging 2D side-scrolling game where the player controls a cat that jumps to avoid obstacles. The project showcases interactive game design using Python and Pygame, relevant to digital arts and media through visual storytelling, animation, and user interaction.
+
+## Features
+- **Jumping Cat Character**
+  - The cat jumps when the player presses the spacebar. This is implemented using velocity and gravity in Pygame.
+- **Scrolling Obstacles**
+  - Rectangular obstacles move from right to left and reset with random spacing. Adds challenge and movement to the game.
+- **Collision Detection**
+  - The game ends when the cat touches an obstacle using Pygame’s `colliderect()` method.
+- **Score System**
+  - A simple score counter based on time or number of passed obstacles.
+- **Visual & Audio Feedback (Stretch Feature)**
+  - Sprites or images for the cat, background music, and sound effects for jumping or collisions.
+
+## Challenges
+- Learning to use sprite images and animation in Pygame.
+- Implementing smooth difficulty scaling (e.g
