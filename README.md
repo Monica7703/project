@@ -1,6 +1,6 @@
-# 🐱 Cat Side Scroller Game
+# Dino Side Scroller Game
 
-A simple yet engaging 2D side-scrolling game built using Python and Pygame. You control a jumping cat that must avoid obstacles to survive as long as possible.
+A simple yet engaging 2D side-scrolling game built using Python and Pygame. You control a jumping dino that must avoid obstacles to survive as long as possible.
 
 This project was created as part of a digital arts & media course final project, combining creativity, interactivity, and programming skills.
 
@@ -8,7 +8,7 @@ This project was created as part of a digital arts & media course final project,
 
 ## 🎮 Gameplay
 
-- Press the **spacebar** to make the cat jump.
+- Press the **spacebar** to make the dino jump.
 - Avoid red blocks (obstacles) that scroll across the screen.
 - Survive as long as possible to increase your score.
 - Game over if you collide with an obstacle!
