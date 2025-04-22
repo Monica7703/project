@@ -1,23 +1,51 @@
-# Dino Side Scroller Game
+# Dino Dash: A Dinosaur-Themed Platformer
 
-## Repository
-https://github.com/Monica7703/proposal.git
+## Repository  
 
-## Description
-This is a simple yet engaging 2D side-scrolling game where the player controls a dino that jumps to avoid obstacles. The project showcases interactive game design using Python and Pygame, relevant to digital arts and media through visual storytelling, animation, and user interaction.
 
-## Features
-- **Jumping Dino Character**
-  - The Dino jumps when the player presses the spacebar. This is implemented using velocity and gravity in Pygame.
-- **Scrolling Obstacles**
-  - Rectangular obstacles move from right to left and reset with random spacing. Adds challenge and movement to the game.
-- **Collision Detection**
-  - The game ends when the dino touches an obstacle using Pygame’s `colliderect()` method.
-- **Score System**
-  - A simple score counter based on time or number of passed obstacles.
-- **Visual & Audio Feedback (Stretch Feature)**
-  - Sprites or images for the Dino, background music, and sound effects for jumping or collisions.
+## Description  
+A side-scrolling platformer game where players control a dinosaur character navigating through prehistoric landscapes while avoiding extinction-level dangers. It combines pixel art, animation, and interactivity, demonstrating key concepts in digital arts, game design, and media.
 
-## Challenges
-- Learning to use sprite images and animation in Pygame.
-- Implementing smooth difficulty scaling (e.g
+## Features  
+- **Player Movement & Controls**  
+  - Implement keyboard-based controls (jump, run, duck) using a game engine such as Unity or a JavaScript framework like Phaser.
+- **Level Design with Obstacles & Enemies**  
+  - Design progressively harder levels with lava pits, boulders, and hostile prehistoric creatures.
+- **Pixel Art & Animation**  
+  - Create custom dinosaur sprites and environments using tools like Aseprite or Piskel. Animate walk cycles, jumps, and attacks.
+- **Scoring System & Lives**  
+  - Add a score counter and limited lives for challenge and replayability.
+- **Sound Effects & Background Music**  
+  - Use royalty-free dinosaur-themed sounds and loopable music to enhance gameplay experience.
+
+## Challenges  
+- Learning to implement physics and collision detection accurately in the chosen engine.
+- Creating and animating pixel art characters and backgrounds.
+- Adding audio assets and synchronizing them with in-game events.
+- Packaging the game to be playable in-browser or downloadable.
+
+## Outcomes  
+**Ideal Outcome:**  
+- A multi-level, fully playable and polished dinosaur-themed platformer complete with custom pixel art, animations, sound, scoring, and responsive controls.
+
+**Minimal Viable Outcome:**  
+- A single playable level with a functioning dinosaur character, jump/run mechanics, basic hazards, and scoring.
+
+## Milestones  
+
+- **Week 1**  
+  1. Set up project structure and GitHub repository.  
+  2. Create basic player sprite and implement movement controls.
+
+- **Week 2**  
+  1. Add obstacles, platforms, and enemy logic.  
+  2. Design and implement first full level.
+
+- **Week 3**  
+  1. Add scoring system, UI, and audio.  
+  2. Create a second level and polish level transitions.
+
+- **Week 4 (Final)**  
+  1. Playtest, fix bugs, and polish animations and sounds.  
+  2. Finalize documentation, README, and deploy game (e.g. on Itch.io or GitHub Pages).
+
