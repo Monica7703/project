@@ -45,3 +45,4 @@ Stay tuned! Previews of gameplay and design assets will be uploaded soon.
 
 ### 1. Clone the repository
 
+https://github.com/Monica7703/proposal.git
