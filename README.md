@@ -1,33 +1,47 @@
-# Dino Side Scroller Game
+# 🦖 Dino Dash: A Dinosaur-Themed Platformer (Python Edition)
 
-A simple yet engaging 2D side-scrolling game built using Python and Pygame. You control a jumping dino that must avoid obstacles to survive as long as possible.
-
-This project was created as part of a digital arts & media course final project, combining creativity, interactivity, and programming skills.
+**Dino Dash** is a side-scrolling platformer built with Python and Pygame. In this game, you guide a pixelated dinosaur through a dangerous prehistoric landscape full of lava pits, falling rocks, and ferocious enemies—all while collecting points and trying to avoid extinction!
 
 ---
 
-## 🎮 Gameplay
+## 🎮 About the Project
 
-- Press the **spacebar** to make the dino jump.
-- Avoid red blocks (obstacles) that scroll across the screen.
-- Survive as long as possible to increase your score.
-- Game over if you collide with an obstacle!
+This project was created as a final submission for a Digital Arts & Media course. It combines programming, pixel art, and interactive storytelling to produce a fun and nostalgic 2D platformer game.
 
 ---
 
-## 📦 Features
+## 🚀 Features
 
-- Smooth jump and gravity system
-- Randomly generated scrolling obstacles
-- Collision detection and game-over screen
-- Simple scoring system
-- Retro-style minimal graphics
-- Easy to modify and expand with sounds, sprites, or levels
+- **Player Movement & Controls**  
+  - Move, jump, and duck using arrow keys or WASD.
+
+- **Hazards and Obstacles**  
+  - Includes lava pits, moving platforms.
+
+- **Custom Pixel Art**  
+  - Dinosaur sprite and environments designed using tools like Aseprite or Piskel.
+
+- **Score and Life System**  
+  - Collect items to score points and avoid hazards to stay alive.
 
 ---
 
-## 🧰 Built With
+## 📸 Screenshots (Coming Soon!)
 
-- [Python 3](https://www.python.org/)
-- [Pygame]
-  
+Stay tuned! Previews of gameplay and design assets will be uploaded soon.
+
+---
+
+## 🧱 Built With
+
+- **Python 3.11**
+- **Pygame** - For game rendering, input, and event loop
+- Pixel Art Tools: Aseprite, Piskel
+- Sound Tools: Freesound.org
+
+---
+
+## 🛠️ Installation
+
+### 1. Clone the repository
+
