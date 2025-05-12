@@ -36,7 +36,7 @@ This project was created as a final submission for a Digital Arts & Media course
 
 ### 1. Clone the repository
 
-https://github.com/Monica7703/proposal.git
+(https://github.com/Monica7703/project.git)
 
 Youtube Video Demonstration
 https://youtu.be/dXUkvZZeekk
