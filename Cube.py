@@ -21,6 +21,7 @@ BLUE = (0, 0, 255)
 LAVA_COLOR = (207, 16, 32)
 PLATFORM_COLOR = (46, 139, 87)
 GOAL_COLOR = (255, 215, 0)
+WALL_COLOR = (100, 100, 100)  # Gray color for walls
 
 # Create the screen
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -34,7 +35,7 @@ class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         # Simple cube player
-        self.image = pygame.Surface((20, 20))
+        self.image = pygame.Surface((30, 50))
         self.image.fill(BLUE)
         self.rect = self.image.get_rect()
         self.rect.x = 100
@@ -43,7 +44,7 @@ class Player(pygame.sprite.Sprite):
         self.on_ground = False
         self.facing_right = True
 
-    def update(self, platforms):
+    def update(self, platforms, walls):
         # Apply gravity
         self.velocity_y += GRAVITY
         self.rect.y += self.velocity_y
@@ -55,6 +56,16 @@ class Player(pygame.sprite.Sprite):
                 self.rect.bottom = platform.rect.top
                 self.velocity_y = 0
                 self.on_ground = True
+
+        # Check for wall collisions (vertical)
+        for wall in walls:
+            # Check if hitting wall from left side
+            if self.rect.right > wall.rect.left and self.rect.left < wall.rect.left and self.rect.bottom > wall.rect.top and self.rect.top < wall.rect.bottom:
+                self.rect.right = wall.rect.left
+            
+            # Check if hitting wall from right side
+            elif self.rect.left < wall.rect.right and self.rect.right > wall.rect.right and self.rect.bottom > wall.rect.top and self.rect.top < wall.rect.bottom:
+                self.rect.left = wall.rect.right
 
         # Prevent falling through bottom
         if self.rect.bottom > SCREEN_HEIGHT:
@@ -96,6 +107,15 @@ class Lava(pygame.sprite.Sprite):
         self.rect.x = x
         self.rect.y = y
 
+class Wall(pygame.sprite.Sprite):
+    def __init__(self, x, y, width, height):
+        super().__init__()
+        self.image = pygame.Surface((width, height))
+        self.image.fill(WALL_COLOR)
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
+
 class Goal(pygame.sprite.Sprite):
     def __init__(self, x, y, width, height):
         super().__init__()
@@ -110,6 +130,7 @@ def create_level():
     all_sprites = pygame.sprite.Group()
     platforms = pygame.sprite.Group()
     lava_pits = pygame.sprite.Group()
+    walls = pygame.sprite.Group()
     
     # Create player
     player = Player()
@@ -143,11 +164,22 @@ def create_level():
         lava_pits.add(lava)
         all_sprites.add(lava)
     
-    # Add goal
-    goal = Goal(700, SCREEN_HEIGHT - 300, 30, 50)
+    # Add walls (obstacles in front of goal)
+    wall_list = [
+        (650, SCREEN_HEIGHT - 500, 20, 419),  # Left wall
+        (730, SCREEN_HEIGHT - 500, 20, 419),   # Right wall
+    ]
+    
+    for x, y, w, h in wall_list:
+        wall = Wall(x, y, w, h)
+        walls.add(wall)
+        all_sprites.add(wall)
+    
+    # Add goal (behind the walls)
+    goal = Goal(675, SCREEN_HEIGHT - 120, 50, 30)
     all_sprites.add(goal)
     
-    return player, all_sprites, platforms, lava_pits, goal
+    return player, all_sprites, platforms, lava_pits, walls, goal
 
 def draw_text(text, color, x, y):
     """Helper function to draw text on screen"""
@@ -156,7 +188,7 @@ def draw_text(text, color, x, y):
     screen.blit(text_surface, text_rect)
 
 def main():
-    player, all_sprites, platforms, lava_pits, goal = create_level()
+    player, all_sprites, platforms, lava_pits, walls, goal = create_level()
     
     game_over = False
     victory = False
@@ -172,7 +204,7 @@ def main():
                     player.jump()
                 if event.key == pygame.K_r and (game_over or victory):
                     # Reset game
-                    player, all_sprites, platforms, lava_pits, goal = create_level()
+                    player, all_sprites, platforms, lava_pits, walls, goal = create_level()
                     game_over = False
                     victory = False
         
@@ -185,7 +217,7 @@ def main():
                 player.move_right()
             
             # Update
-            player.update(platforms)
+            player.update(platforms, walls)
             
             # Check for lava collision
             if pygame.sprite.spritecollide(player, lava_pits, False):
