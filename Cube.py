@@ -8,7 +8,7 @@ pygame.init()
 # Constants
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
-GRAVITY = 0.5
+GRAVITY = 0.6
 JUMP_STRENGTH = -11
 PLAYER_SPEED = 5
 
@@ -35,7 +35,7 @@ class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         # Simple cube player
-        self.image = pygame.Surface((20, 20))
+        self.image = pygame.Surface((5, 5))
         self.image.fill(BLUE)
         self.rect = self.image.get_rect()
         self.rect.x = 100
@@ -151,8 +151,6 @@ def create_level():
         (380, SCREEN_HEIGHT - 500, 10, 10),
 
 
-        
-        
 
     ]
     
