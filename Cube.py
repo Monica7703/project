@@ -143,10 +143,17 @@ def create_level():
     
     # Add some platforms
     platforms_list = [
-        (500, SCREEN_HEIGHT - 250, 50, 20),
         (200, SCREEN_HEIGHT - 300, 50, 20),
         (200, SCREEN_HEIGHT - 480, 50, 20),
         (300, SCREEN_HEIGHT - 180, 50, 20),
+        (300, SCREEN_HEIGHT - 389, 50, 20),
+        (520, SCREEN_HEIGHT - 500, 10, 10),
+        (380, SCREEN_HEIGHT - 500, 10, 10),
+
+
+        
+        
+
     ]
     
     for x, y, w, h in platforms_list:
@@ -156,7 +163,7 @@ def create_level():
     
     # Add lava pits
     lava_list = [
-        (250, SCREEN_HEIGHT - 80, 600, 100),
+        (250, SCREEN_HEIGHT - 80, 700, 200),
     ]
     
     for x, y, w, h in lava_list:
@@ -233,10 +240,10 @@ def main():
         
         # Draw UI messages
         if game_over:
-            draw_text("GAME OVER - Press R to restart", RED, SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2)
+            draw_text("GAME OVER - Press R to restart", RED, SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2.5)
         
         if victory:
-            draw_text("VICTORY! - Press R to play again", GOAL_COLOR, SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2)
+            draw_text("VICTORY! - Press R to play again", GOAL_COLOR, SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2.5)
         
         # Update display
         pygame.display.flip()
