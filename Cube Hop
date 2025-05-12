@@ -1,0 +1,38 @@
+# CUBE HOP simple platformer game
+
+## Repository  
+https://github.com/Monica7703/proposal.git
+
+## Description  
+A simple platformer game where players control a cube character navigating through platforms to avoid certain doom.
+## Features  
+- **Player Movement & Controls**  
+  - Implement keyboard-based controls (jump & run) 
+
+## Challenges  
+- Learning to implement physics and collision detection.
+
+## Outcomes  
+**Ideal Outcome:**  
+- A fully playable Cube themed platformer and responsive controls.
+
+**Minimal Viable Outcome:**  
+- A single playable level with a functioning character, jump/run mechanics, basic hazards, and scoring.
+
+## Milestones  
+
+- **Week 1**  
+  1. Set up project structure and GitHub repository.  
+  2. Create basic Cube player sprite and implement movement controls.
+
+- **Week 2**  
+  1. Add obstacles, platforms, and enemy logic.  
+  2. Design and implement full level.
+
+- **Week 3**  
+  1. Add scoring system
+
+- **Week 4 (Final)**  
+  1. Playtest, fix bugs
+  2. Finalize documentation, README, and deploy game (e.g. on Itch.io or GitHub Pages).
+

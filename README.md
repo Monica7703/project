@@ -13,10 +13,10 @@ This project was created as a final submission for a Digital Arts & Media course
 ## 🚀 Features
 
 - **Player Movement & Controls**  
-  - Move, jump, using WASD and spacebar.
+  - Move & jump, using arrow keys and spacebar.
 
 - **Hazards and Obstacles**  
-  - Includes lava pits and platforms.
+  - Includes lava pit, walls, and platforms.
 
 - **Goal/win or lose**  
   - Reach the yellow goal to win and press 'r' to restart the game.
