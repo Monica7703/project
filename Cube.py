@@ -9,7 +9,7 @@ pygame.init()
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 GRAVITY = 0.5
-JUMP_STRENGTH = -12
+JUMP_STRENGTH = -11
 PLAYER_SPEED = 5
 
 # Colors
@@ -35,7 +35,7 @@ class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         # Simple cube player
-        self.image = pygame.Surface((30, 50))
+        self.image = pygame.Surface((20, 20))
         self.image.fill(BLUE)
         self.rect = self.image.get_rect()
         self.rect.x = 100
