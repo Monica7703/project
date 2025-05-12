@@ -22,10 +22,6 @@ This project was created as a final submission for a Digital Arts & Media course
   - Reach the yellow goal to win and press 'r' to restart the game.
   - Avoid the red lava pit that causes you to lose!
 
----
-
-## 📸 Screenshots
-
 
 ---
 
